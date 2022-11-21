@@ -24,6 +24,9 @@ public class Server extends Thread
         ){
             String message = input.readLine();
             System.out.println(message);
+            String[] s = {"Jani", "Frida", "Valeria", "Zoe"};
+            Question q = new Question("Vem är bäst?", s, 1);
+            output.writeObject(q);
 
         }catch(IOException e){
             e.printStackTrace();
